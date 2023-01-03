@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MovieDetails">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backDrop"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <ImageView
+            android:id="@+id/imagePoster"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+            android:layout_below="@id/backDrop"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="-70dp" />
+
+
+        <TextView
+            android:id="@+id/movieName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/backDrop"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imagePoster"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/releaseDateTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/movieName"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imagePoster"
+            android:text="Release Date:"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/originalLanguageTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/releaseDateTitle"
+            android:layout_alignStart="@id/releaseDateTitle"
+            android:layout_marginTop="10dp"
+            android:text="Original Language:"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/moviePopularityTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/originalLanguageTitle"
+            android:layout_alignStart="@id/releaseDateTitle"
+            android:layout_marginTop="10dp"
+            android:text="Popularity:"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/averageRatingTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moviePopularityTitle"
+            android:layout_alignStart="@id/releaseDateTitle"
+            android:layout_marginTop="10dp"
+            android:text="Average Rating:"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/overViewTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagePoster"
+            android:layout_alignStart="@id/imagePoster"
+            android:layout_marginTop="10dp"
+            android:text="Overview:"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:id="@+id/releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagePoster"
+            android:layout_alignTop="@id/releaseDateTitle"
+            android:layout_marginLeft="10dp"
+
+            android:layout_toRightOf="@id/releaseDateTitle"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/originalLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/releaseDate"
+            android:layout_alignStart="@id/releaseDate"
+            android:layout_alignTop="@id/originalLanguageTitle"
+            android:layout_toRightOf="@id/originalLanguageTitle"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/moviePopularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/originalLanguage"
+            android:layout_alignStart="@id/releaseDate"
+            android:layout_alignTop="@id/moviePopularityTitle"
+            android:layout_toRightOf="@id/moviePopularityTitle"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/averageRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moviePopularity"
+            android:layout_alignTop="@id/averageRatingTitle"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/averageRatingTitle"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/overView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/overViewTitle"
+            android:layout_alignStart="@id/overViewTitle"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/recommendations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/overView"
+            android:layout_alignStart="@id/overViewTitle"
+            android:layout_marginTop="10dp"
+            android:text="Recommendations"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/recommendationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recommendations"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/similarMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recommendationView"
+            android:layout_alignStart="@id/recommendations"
+            android:layout_marginTop="10dp"
+            android:text="Similar Movies"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/similarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/similarMovies" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/recommendationShimmer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/recommendations">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/shimmerlayout">
+
+                </include>
+
+                <include layout="@layout/shimmerlayout">
+
+                </include>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </RelativeLayout>
+
+</ScrollView>
